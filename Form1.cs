@@ -13,8 +13,7 @@ namespace Rock__Paper__Scissors____WinForm____Part_6._5
     public partial class Form1 : Form
 
     {
-
-        
+        Random r = new Random();
 
         public Form1()
         {
@@ -43,26 +42,72 @@ namespace Rock__Paper__Scissors____WinForm____Part_6._5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random r = new Random();
-            int computerChoice = r.Next(1,3);
+            int computerChoice = r.Next(1,4);
+
+            label1.Text = computerChoice + "";
+
+            //TIES//
 
             if (computerChoice == 1)
             {
-                (grpPlayerChoice = radRock);
-
+                msg1.Text = "The computer chose rock!";
+                if (radRock.Checked)
+                    msg1.Text += " It is a tie.";
             }
 
-
-
-
-
-
-
-
-            if (grpPlayerChoice = radRock){
-                msg1.Text = ("");
+            else if (computerChoice == 2)
+            {
+                msg1.Text = "The computer chose paper!";
+                if (radPaper.Checked) 
+                    msg1.Text += " It is a tie.";
             }
 
+            else if (computerChoice == 3)
+            {
+                msg1.Text = "The computer chose scissors!";
+                if (radScissors.Checked)
+                    msg1.Text += " It is a tie.";
+            }
+
+            //USER WINS//
+
+            if (computerChoice == 1)
+            {
+                if (radPaper.Checked) 
+                    msg1.Text += " You have won!";
+            }
+
+            else if (computerChoice == 2)
+            {
+                if (radScissors.Checked) 
+                    msg1.Text += " You have won!";
+            }
+
+            else if (computerChoice == 3)
+            {
+                if (radRock.Checked)
+                    msg1.Text += " You have won!";
+            }
+
+            //COMPUTER WINS//
+
+            if (computerChoice == 1)
+            {
+                if (radScissors.Checked) 
+                    msg1.Text += " The computer has won!";
+            }
+
+            else if (computerChoice == 2)
+            {
+                if (radRock.Checked) 
+                    msg1.Text += " The computer has won!";
+            }
+
+            else if (computerChoice == 3)
+            {
+                if (radPaper.Checked)
+                    msg1.Text += " The computer has won!";
+            }
         }
 
         private void picBox1_Click(object sender, EventArgs e)
@@ -74,21 +119,21 @@ namespace Rock__Paper__Scissors____WinForm____Part_6._5
         {
             int radRock = 1;
             imgPlayer.Image = Properties.Resources.Rock;
-            msg1.Text = "You chose rock.";
+            msg1.Text = "You chose rock. Submit to confirm your selection.";
         }
 
         private void radPaper_CheckedChanged(object sender, EventArgs e)
         {
             int radPaper = 2;
             imgPlayer.Image = Properties.Resources.Paper;
-            msg1.Text = "You chose paper.";
+            msg1.Text = "You chose paper. Submit to confirm your selection.";
         }
 
         private void radScissors_CheckedChanged(object sender, EventArgs e)
         {
             int radScissors = 3;
             imgPlayer.Image = Properties.Resources.Scissors;
-            msg1.Text = "You chose scissors";
+            msg1.Text = "You chose scissors. Submit to confirm your selection.";
         }
 
         private void grpPlayerChoice_Enter(object sender, EventArgs e)

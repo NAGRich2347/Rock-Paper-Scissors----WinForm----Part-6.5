@@ -39,6 +39,7 @@
             this.grpPlayerChoice = new System.Windows.Forms.GroupBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.imgPlayer = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox3)).BeginInit();
@@ -166,12 +167,23 @@
             this.imgPlayer.TabIndex = 10;
             this.imgPlayer.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(350, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(498, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.imgPlayer);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.grpPlayerChoice);
@@ -205,6 +217,7 @@
         private System.Windows.Forms.GroupBox grpPlayerChoice;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.PictureBox imgPlayer;
+        private System.Windows.Forms.Label label1;
     }
 }
 
