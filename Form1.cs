@@ -48,7 +48,7 @@ namespace Rock__Paper__Scissors____WinForm____Part_6._5
 
             if (computerChoice == 1)
             {
-                if (grpPlayerChoice == radRock);
+                (grpPlayerChoice = radRock);
 
             }
 
@@ -59,7 +59,7 @@ namespace Rock__Paper__Scissors____WinForm____Part_6._5
 
 
 
-            if grpPlayerChoice = radRock{
+            if (grpPlayerChoice = radRock){
                 msg1.Text = ("");
             }
 
